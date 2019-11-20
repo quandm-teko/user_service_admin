@@ -29,7 +29,7 @@ class GeneralInfo extends Model
         'dob',
     ];
     // protected $hidden = [];
-    // protected $dates = [];
+    protected $dates = ['dob'];
 
     public function client()
     {

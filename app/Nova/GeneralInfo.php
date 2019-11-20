@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
@@ -52,7 +53,7 @@ class GeneralInfo extends Resource
             Text::make('UserId', 'user_id')->sortable(),
             Text::make('Email')->sortable(),
             Text::make('Phone')->sortable(),
-            Text::make('Dob', 'dob')->sortable(),
+            Date::make('Dob', 'dob')->pickerFormat('Y-m-d'),
             Text::make('Avatar')->sortable(),
             Select::make('Sex', 'sex')->options([
                 'male' => 'Male',
