@@ -49,12 +49,12 @@ class GeneralInfo extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Name')->sortable(),
-            Text::make('UserId')->sortable(),
+            Text::make('UserId', 'user_id')->sortable(),
             Text::make('Email')->sortable(),
             Text::make('Phone')->sortable(),
-            Text::make('Dob')->sortable(),
+            Text::make('Dob', 'dob')->sortable(),
             Text::make('Avatar')->sortable(),
-            Select::make('Sex')->options([
+            Select::make('Sex', 'sex')->options([
                 'male' => 'Male',
                 'female' => 'Female',
                 'other' => 'Other',
